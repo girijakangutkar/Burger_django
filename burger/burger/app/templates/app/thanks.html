@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mb-5">
+    <div class="row justify-content-center mt-1">
+        <div class="col-md-5 col-sm-12 p-4 text-center">
+            <h1>Thanks for login!</h1>
+            <p>You should receive a confirmation email soon.</p>
+            <a href="{% url 'order' %}">Go to the homepage</a>
+        </div>
+    </div>
+{% endblock content %}

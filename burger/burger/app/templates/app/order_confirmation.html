@@ -1,0 +1,27 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mb-5">
+    <div class="row justify-content-center mt-1">
+        <div class="col-md-5 col-sm-12 p-4 text-center">
+            <h1>Order Submitted!</h1>
+            <p>You should receive a confirmation email soon.</p>
+            <a href="{% url 'index' %}">Go to the homepage</a>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-5 col-sm-12 text-center">
+            <link rel="stylesheet" href="{% static 'js/order.css' %}">
+            <h3 class="pb-3">Order Summary:</h3>
+            <p class="font-weight-bold pt-4">Thanks you for ordering</p>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+<!--<script>
+  document.getElementById('valueList').textContent=listArray
+</script>
+-->
+

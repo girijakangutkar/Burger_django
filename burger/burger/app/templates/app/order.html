@@ -1,0 +1,120 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+
+{% block content %}
+<div class="container mb-5">
+   <div class="container">
+    <div class="row justify-content-center mt-1">
+        <div class="col-md-12 col-sm-12 p-4">
+            <form method="GET">
+                {% csrf_token %}
+                <div class="pt-5">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-12">
+                            <img class="rounded" src="{% static "images/patty.png" %}" type="required" width="150" height="100"/>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" id="patty" class="checkbox" value="patty">
+                                    <label class="form-check-label">patty</label>
+                                </div>
+                                <p class="font-weight-bold pl-5">20/-</p>
+                            </div>
+                            <p>delicious</p>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+
+                <div class="pt-5">
+                    <div class="row mt-4">
+                        <div class="col-md-2 col-sm-12">
+                            <img class="rounded" src="{% static "images/tomato.png" %}" width="150" height="100"/>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" id="tomato" class="checkbox" value="tomato">
+                                    <label class="form-check-label">Tomato</label>
+                                </div>
+                                <p class="font-weight-bold pl-5">20/-</p></p>
+                            </div>
+                            <p>Redish</p>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+
+                <div class="pt-5">
+                    <div class="row mt-4">
+                        <div class="col-md-2 col-sm-12">
+                            <img class="rounded" src="{% static 'images/cheese.png' %}" width="150" height="100"/>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" id="cheese" class="checkbox" value="cheese">
+                                    <label class="form-check-label">Cheese</label>
+                                </div>
+                                <p class="font-weight-bold pl-5">10/-</p>
+                            </div>
+                            <p>cheesey</p>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+                <div class="pt-5">
+                    <div class="row mt-4">
+                        <div class="col-md-2 col-sm-12">
+                            <img class="rounded" src="{% static "images/onion.png" %}" width="150" height="100"/>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" id="onion" class="checkbox" value="onion">
+                                    <label class="form-check-label">Onion</label>
+                                </div>
+                                <p class="font-weight-bold pl-5">20/-</p>
+                            </div>
+                            <p>tasty</p>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+                <div class="pt-5">
+                    <div class="row mt-4">
+                        <div class="col-md-2 col-sm-12">
+                            <img class="rounded" src="{% static "images/lettuce.png" %}" width="150" height="100"/>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" id="lettuce" class="checkbox" value="lettuce">
+                                    <label class="form-check-label">Lettuce</label>
+                                </div>
+                                <p class="font-weight-bold pl-5">20/-</p>
+                            </div>
+                            <p>greeny</p>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+            
+                <a href="{% url 'order_confirmation' %}" class="btn btn-primary">Confirm!</a>
+               
+            </form>
+        </div>
+        
+        <div class="print-value">
+          <p id="valueList">You have orderded your burger with:</p>
+          <link rel="stylesheet" href="{% static 'js/order.css' %}">
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock content %}
+<!--<script src="order.js"></script>
+<!--<script src="{% static "static/js/order.js" %}"></script> 
+
